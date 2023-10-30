@@ -1,0 +1,19 @@
+﻿<Window x:Class="OpenListbox.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OpenListbox"
+        mc:Ignorable="d"
+        Title="AuthWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="file_way" d:ItemsSource="{d:SampleData ItemCount=5}" AllowDrop="True" HorizontalAlignment="Left" Width="375" Height="246" VerticalAlignment="Top" Margin="10,10,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        <Border HorizontalAlignment="Center" Width="375" Height="246" VerticalAlignment="Top" Margin="415,10,0,0" >
+            <ListBox x:Name="file_info" d:ItemsSource="{d:SampleData ItemCount=5}" AllowDrop="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Top" MinHeight="200" HorizontalContentAlignment="Stretch" MaxWidth="500" MaxHeight="500"/>
+        </Border>
+        <Button x:Name="button_choose_file" Content="Button" HorizontalAlignment="Left" Margin="129,319,0,0" VerticalAlignment="Top" Height="39" Width="105" Click="button_choose_file_Click"/>
+        <Button x:Name="button_display_info" Content="Button" HorizontalAlignment="Left" Margin="538,319,0,0" VerticalAlignment="Top" Height="39" Width="105" Click="button_display_info_Click"/>
+        <ListBox x:Name="file_dragging" d:ItemsSource="{d:SampleData ItemCount=0}" AllowDrop="True" DragEnter="file_dragging_DragEnter" Drop="file_dragging_Drop" Margin="266,301,0,0" Height="75" VerticalAlignment="Top" HorizontalAlignment="Left" Width="245"/>
+
+    </Grid>
+</Window>

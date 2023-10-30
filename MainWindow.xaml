@@ -7,13 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="file_way" d:ItemsSource="{d:SampleData ItemCount=5}" AllowDrop="True" HorizontalAlignment="Left" Width="375" Height="246" VerticalAlignment="Top" Margin="10,10,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
-        <Border HorizontalAlignment="Center" Width="375" Height="246" VerticalAlignment="Top" Margin="415,10,0,0" >
-            <ListBox x:Name="file_info" d:ItemsSource="{d:SampleData ItemCount=5}" AllowDrop="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Top" MinHeight="200" HorizontalContentAlignment="Stretch" MaxWidth="500" MaxHeight="500"/>
-        </Border>
-        <Button x:Name="button_choose_file" Content="Button" HorizontalAlignment="Left" Margin="129,319,0,0" VerticalAlignment="Top" Height="39" Width="105" Click="button_choose_file_Click"/>
-        <Button x:Name="button_display_info" Content="Button" HorizontalAlignment="Left" Margin="538,319,0,0" VerticalAlignment="Top" Height="39" Width="105" Click="button_display_info_Click"/>
-        <ListBox x:Name="file_dragging" d:ItemsSource="{d:SampleData ItemCount=0}" AllowDrop="True" DragEnter="file_dragging_DragEnter" Drop="file_dragging_Drop" Margin="266,301,0,0" Height="75" VerticalAlignment="Top" HorizontalAlignment="Left" Width="245"/>
+        <Rectangle HorizontalAlignment="Center" Height="312" Margin="0,18,0,0" Stroke="Black" VerticalAlignment="Top" Width="288"/>
+
+        <Label Content="Authorization" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Login" HorizontalAlignment="Center" Margin="0,106,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Password" HorizontalAlignment="Center" Margin="0,199,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Center" Margin="0,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168" Height="25" FontSize="14"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Margin="0,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168" Height="25" FontSize="14"/>
+        <Button x:Name="SignButton" Content="Sign In" HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Height="26" Width="64" Click="SignButton_Click"/>
 
     </Grid>
 </Window>
+
