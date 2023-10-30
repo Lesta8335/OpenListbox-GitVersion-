@@ -26,12 +26,22 @@ namespace OpenListbox
 
         private void SignButton_Click(object sender, RoutedEventArgs e)
         {
-            // Скрыть текущее окно
-            this.Hide();
+            string login = LoginTextBox.Text;
+            string password = PasswordTextBox.Text;
+            bool isCorrect = login == "admin" && password == "12345";
+            if (isCorrect)
+            {
+                // Скрыть текущее окно
+                this.Hide();
 
-            // Показать второе окно
-            AuthWindow window = new AuthWindow();
-            window.Show();
+                // Показать второе окно
+                AuthWindow window = new AuthWindow();
+                window.Show();
+            }
+            else
+            {
+                MessageBox.Show("Вы указали неверные данные для входа.");
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

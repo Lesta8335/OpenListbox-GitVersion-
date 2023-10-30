@@ -24,8 +24,8 @@ namespace OpenListbox
     /// </summary>
     public partial class AuthWindow : Window
     {
-        string selectedFileName = null;
-        string selectedFileContent = null;
+        string selectedFileName = "";
+        string selectedFileContent = "";
 
         public AuthWindow()
         {
