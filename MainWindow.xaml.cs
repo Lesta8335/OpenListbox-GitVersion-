@@ -39,7 +39,7 @@ namespace OpenListbox
 
 
             //// Get the selected file name and display in a TextBox 
-            //if (result == true)
+            //if (result ==
             //{
             //    // Open document 
             //    selectedFileName = dlg.FileName;
